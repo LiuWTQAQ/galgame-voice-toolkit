@@ -108,7 +108,7 @@ python -m pip install -r requirements.txt
 ### 方式 C：Linux / 算力平台（`setup.sh` + `run.sh`）
 
 ```bash
-git clone https://github.com/<你的用户名>/galgame-voice-toolkit.git
+git clone https://github.com/LiuWTQAQ/galgame-voice-toolkit.git
 cd galgame-voice-toolkit
 bash setup.sh                # 建 .venv、装依赖，有 N 卡会自动装 cublas/cudnn
 bash run.sh --help           # 看用法
