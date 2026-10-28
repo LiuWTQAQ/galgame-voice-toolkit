@@ -1,0 +1,12 @@
+* text=auto
+
+# Windows 批处理必须是 CRLF，否则 cmd 解析异常
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 脚本 / 源码统一 LF，方便在 Linux 算力平台上直接跑
+*.sh  text eol=lf
+*.py  text eol=lf
+*.md  text eol=lf
+*.toml text eol=lf
+*.json text eol=lf

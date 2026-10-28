@@ -1,0 +1,48 @@
+# ---- 依赖（setup.bat / setup.sh 在本目录生成，别提交）----
+vendor/
+.deps/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# ---- Python 缓存 ----
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 产物（音视频体积巨大，绝不入库）----
+*.mp3
+*.mp4
+*.flac
+*.ogg
+*.wav
+*.m4a
+*.aac
+voicepack_out/
+jobs/
+*_part_*.mp3
+*_part_*.mp4
+*_suspect.mp3
+cover.png
+master.flac
+
+# ---- 运行时缓存与日志 ----
+asr_*.jsonl
+verify_*.jsonl
+remote_results.jsonl
+*.log
+.calib/
+.remote_selftest/
+.tmp*
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "galgame-voice-toolkit"
+version = "1.1.0"
+description = "把 Galgame 解包出来的逐句角色语音（ogg）合成 MP3 / MP4，并用本地 Whisper 多轮判别剔除敏感台词"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["galgame", "voice", "whisper", "asr", "ffmpeg", "mp3", "mp4"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion",
+]
+dependencies = [
+    "faster-whisper>=1.2.0,<2",
+    "numpy>=1.26",
+    "Pillow>=10.0",
+]
+
+# 可选：N 卡加速（pip install "galgame-voice-toolkit[cuda]"）
+[project.optional-dependencies]
+cuda = [
+    "nvidia-cublas-cu12",
+    "nvidia-cudnn-cu12",
+]
+
+[project.scripts]
+voicepack = "voicepack.cli:main"
+
+[tool.setuptools]
+packages = ["voicepack"]
